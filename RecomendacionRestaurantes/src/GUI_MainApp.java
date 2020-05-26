@@ -16,8 +16,8 @@ public class GUI_MainApp {
 
 	private JFrame frame;
 	
-	private ImageIcon logo, ubicacion, dinero;
-	private Icon logoIcon, ubicacionIcon, dineroIcon;
+	private ImageIcon logo, ubicacion, dinero, calificacion;
+	private Icon logoIcon, ubicacionIcon, dineroIcon, calificacionIcon;
 
 	/**
 	 * Launch the application.
@@ -58,6 +58,9 @@ public class GUI_MainApp {
 		ubicacionIcon = new ImageIcon(ubicacion.getImage().getScaledInstance(40, 35, Image.SCALE_DEFAULT));
 		dinero = new ImageIcon(getClass().getResource("dinero.png"));
 		dineroIcon = new ImageIcon(dinero.getImage().getScaledInstance(50, 45, Image.SCALE_DEFAULT));
+		calificacion = new ImageIcon(getClass().getResource("calificacion.png"));
+		calificacionIcon = new ImageIcon(calificacion.getImage().getScaledInstance(50, 45, Image.SCALE_DEFAULT));
+		
 		
 		JPanel HomePanel = new JPanel();
 		HomePanel.setBackground(Color.WHITE);
@@ -96,7 +99,7 @@ public class GUI_MainApp {
 		JLabel lblLimiteEconomico = new JLabel("LIMITE ECONOMICO");
 		lblLimiteEconomico.setForeground(new Color(204, 0, 0));
 		lblLimiteEconomico.setFont(new Font("Bahnschrift", Font.BOLD, 20));
-		lblLimiteEconomico.setBounds(57, 225, 187, 26);
+		lblLimiteEconomico.setBounds(67, 225, 187, 26);
 		HomePanel.add(lblLimiteEconomico);
 		
 		JLabel lblUbicacionImage = new JLabel("");
@@ -109,8 +112,60 @@ public class GUI_MainApp {
 		JLabel lblDineroImage = new JLabel("");
 		lblDineroImage.setForeground(new Color(204, 0, 0));
 		lblDineroImage.setFont(new Font("Bahnschrift", Font.BOLD, 20));
-		lblDineroImage.setBounds(7, 212, 40, 45);
+		lblDineroImage.setBounds(7, 212, 50, 45);
 		HomePanel.add(lblDineroImage);
 		lblDineroImage.setIcon(dineroIcon);
+		
+		JLabel lblMaxDinero = new JLabel("<html>Seleccione un rango de precios<html>\r\n");
+		lblMaxDinero.setFont(new Font("Bahnschrift", Font.PLAIN, 18));
+		lblMaxDinero.setBounds(10, 261, 143, 45);
+		HomePanel.add(lblMaxDinero);
+		
+		JComboBox cbDinero = new JComboBox();
+		cbDinero.setBounds(163, 261, 171, 41);
+		HomePanel.add(cbDinero);
+		
+		JLabel lblCalificacion = new JLabel("CALIFICACION");
+		lblCalificacion.setForeground(new Color(204, 0, 0));
+		lblCalificacion.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		lblCalificacion.setBounds(67, 328, 187, 26);
+		HomePanel.add(lblCalificacion);
+		
+		JLabel lblCalificacionImage = new JLabel("");
+		lblCalificacionImage.setForeground(new Color(204, 0, 0));
+		lblCalificacionImage.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		lblCalificacionImage.setBounds(10, 323, 50, 41);
+		HomePanel.add(lblCalificacionImage);
+		lblCalificacionImage.setIcon(calificacionIcon);
+		
+		JLabel lblUnaE = new JLabel("");
+		lblUnaE.setForeground(new Color(204, 0, 0));
+		lblUnaE.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		lblUnaE.setBounds(10, 380, 50, 45);
+		HomePanel.add(lblUnaE);
+		
+		JLabel label = new JLabel("");
+		label.setForeground(new Color(204, 0, 0));
+		label.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		label.setBounds(83, 380, 50, 45);
+		HomePanel.add(label);
+		
+		JLabel label_1 = new JLabel("");
+		label_1.setForeground(new Color(204, 0, 0));
+		label_1.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		label_1.setBounds(131, 380, 50, 45);
+		HomePanel.add(label_1);
+		
+		JLabel label_2 = new JLabel("");
+		label_2.setForeground(new Color(204, 0, 0));
+		label_2.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		label_2.setBounds(201, 380, 50, 45);
+		HomePanel.add(label_2);
+		
+		JLabel label_3 = new JLabel("");
+		label_3.setForeground(new Color(204, 0, 0));
+		label_3.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		label_3.setBounds(248, 380, 50, 45);
+		HomePanel.add(label_3);
 	}
 }
