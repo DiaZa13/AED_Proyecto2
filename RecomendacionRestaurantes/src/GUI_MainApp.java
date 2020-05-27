@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JComboBox;
 import java.awt.Font;
-
+//Borrar despues
 public class GUI_MainApp {
 
 	private JFrame frame;
