@@ -59,6 +59,21 @@ while n < 4:
         for restaurant in restaurants2:
             print("Restaurante: {0}".format(restaurant))
         print("")
+        print("*--Tipo de comida--*")
+        print("1. Gourmet")
+        print("2. Pizza")
+        print("3. Tacos")
+        print("4. Shucos")
+        print("5. Casera")
+        print("6. Pollo")
+        print("7. Comida Rapida")
+        print("8. Carne")
+        print("9. Hamburguesa")
+        score = int(input("Ingrese el numero de tipo de comida que busca: "))
+        restaurants3 = searchRestaurantbyType(score)
+        for restaurant in restaurants3:
+            print("Restaurante: {0}".format(restaurant))
+        print("")
     if n == 2:
         print("Ingresar el restaurante")
         restaurante = input()

@@ -1,5 +1,5 @@
 from py2neo import *
-graph = Graph("bolt://localhost:7687", user="neo4j", password="password")
+graph = Graph("bolt://localhost:7687", user="neo4j", password="1234")
 
 #Adds a new restaurant to the database
 def addNewnode(restaurante,direccion,nombre,graph):
@@ -47,6 +47,7 @@ def searchRestaurantbyZone(zone):
         
     return zoneRestaurants
 
+#Look for a restaurant depending the money accesibility
 def searchRestaurantbyMoney(money):
     moneyRestaurants = []
     if money == 1:
@@ -109,6 +110,60 @@ def searchRestaurantbyScore(score):
         scoreRestaurants.append(restaurant)
         print ("hola")
     return scoreRestaurants
+
+#Look for a restaurant depending the food type
+def searchRestaurantbyType(foodType):
+    typeRestaurants = []
+    if foodType == 1:
+        query = """
+        MATCH (restaurante)-[:Tipo]-> (Type {name: "Gourmet"})
+        RETURN restaurante.name
+        """
+    if foodType == 2:
+        query = """
+        MATCH (restaurante)-[:Tipo]-> (Type {name: "Pizza"})
+        RETURN restaurante.name
+        """
+    if foodType == 3:
+        query = """
+        MATCH (restaurante)-[:Tipo]-> (Type {name: "Tacos"})
+        RETURN restaurante.name
+        """
+    if foodType == 4:
+        query = """
+        MATCH (restaurante)-[:Tipo]-> (Type {name: "Shucos"})
+        RETURN restaurante.name
+        """
+    if foodType == 5:
+        query = """
+        MATCH (restaurante)-[:Tipo]-> (Type {name: "Casera"})
+        RETURN restaurante.name
+        """
+    if foodType == 6:
+        query = """
+        MATCH (restaurante)-[:Tipo]-> (Type {name: "Pollo"})
+        RETURN restaurante.name
+        """
+    if foodType == 7:
+        query = """
+        MATCH (restaurante)-[:Tipo]-> (Type {name: "Comida Rapida"})
+        RETURN restaurante.name
+        """
+    if foodType == 8:
+        query = """
+        MATCH (restaurante)-[:Tipo]-> (Type {name: "Carne"})
+        RETURN restaurante.name
+        """
+    if foodType == 4:
+        query = """
+        MATCH (restaurante)-[:Rango_Precios]-> (Type {name: "Hamburguesa"})
+        RETURN restaurante.name
+        """
+    restaurants = graph.run(query).data()
+    for restaurant in restaurants:
+        typeRestaurants.append(restaurant)
+        
+    return typeRestaurants
 
 
 
