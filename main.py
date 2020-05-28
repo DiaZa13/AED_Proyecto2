@@ -17,10 +17,8 @@ print("_________________________________________________________________________
 print("PARA INICIAR EL PROGRAMA, POR FAVOR SELECCIONE UNA DE LAS OPCIONES QUE SE PRESENTAN A CONTINUACION")
 print("____________________________________________________________________________________________________")
 
-while n < 4:    
 
-while n < 5:    
->>>>>>> Stashed changes
+while n < 4:    
     print ("1. Encontrar una recomendacion")
     print ("2. Agregar nueva informacion al programa")
     print ("3. Eliminar datos que no desea en el programa")
@@ -34,7 +32,11 @@ while n < 5:
         print("1. Zona 9")
         print("2. Zona 10")
         print("3. Zona 15")
-        zone = input("Ingrese el numero de la zona en la que se encuentra: ")
+        zone = int(input("Ingrese el numero de la zona en la que se encuentra: "))
+        restaurants = searchRestaurantbyZone(zone)
+        for restaurant in restaurants:
+            print("Restaurante: {0}".format(restaurant))
+        print("")
     if n == 2:
         print("Ingresar el restaurante")
         restaurante = input()
