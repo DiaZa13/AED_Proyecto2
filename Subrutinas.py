@@ -141,22 +141,22 @@ def searchRestaurantbyType(foodType):
     if foodType == 6:
         query = """
         MATCH (restaurante)-[:Tipo]-> (Type {name: "Pollo"})
-        RETURN restaurante.name
+        RETURN restaurante
         """
     if foodType == 7:
         query = """
         MATCH (restaurante)-[:Tipo]-> (Type {name: "Comida Rapida"})
-        RETURN restaurante.name
+        RETURN restaurante
         """
     if foodType == 8:
         query = """
         MATCH (restaurante)-[:Tipo]-> (Type {name: "Carne"})
-        RETURN restaurante.name
+        RETURN restaurante
         """
     if foodType == 4:
         query = """
         MATCH (restaurante)-[:Rango_Precios]-> (Type {name: "Hamburguesa"})
-        RETURN restaurante.name
+        RETURN restaurante
         """
     restaurants = graph.run(query).data()
     for restaurant in restaurants:
@@ -169,8 +169,27 @@ def determinateRecommendation(zoneRestaurants,moneyRestaurants,scoreRestaurants,
     for restaurant in zoneRestaurants:
         if restaurant in moneyRestaurants:
             recommendation.append(restaurant)
-            
+    for restaurant in zoneRestaurants:
+        if restaurant in scoreRestaurants:
+            recommendation.append(restaurant)
+    for restaurant in zoneRestaurants:
+        if restaurant in moneyRestaurants:
+            recommendation.append(restaurant)
+
     return recommendation
+
+#Look for the restaurants that complete the user requirements
+def finalRecommendation(recommendation):
+    unique = []
+    finalrecommendation = []
+    for x in recommendation:
+        if x not in unique:
+            unique.append(x)
+        else:
+            if x not in finalrecommendation:
+                finalrecommendation.append(x)
+            
+    return finalrecommendation
     
 
 

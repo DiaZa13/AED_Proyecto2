@@ -63,7 +63,8 @@ while n < 4:
         score = int(input("Ingrese el numero de tipo de comida que busca: "))
         restaurants3 = searchRestaurantbyType(score)
         recommendation = determinateRecommendation(restaurants,restaurants1,restaurants2,restaurants3)
-        for recommended in recommendation:
+        finalrecommendation = finalRecommendation(recommendation)
+        for recommended in finalrecommendation:
             print("Recomendacion: {0}".format(recommended))
         print("")
     if n == 2:
