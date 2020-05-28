@@ -40,7 +40,7 @@ while n < 5:
         print("Ingresar la direccion del restaurante")
         direccion = input()
         
-        agregarNodo(restaurante,direccion,nombre,graph)
+        addNewnode(restaurante,direccion,nombre,graph)
     if n == 3:
         print("Ingresar el restaurante al que desea eliminar")
         restaurante = input()
@@ -49,7 +49,7 @@ while n < 5:
         print("Ingresar la direccion del restaurante eliminar")
         direccion = input()
          
-        eliminarNodo(restaurante,nombre,direccion,graph)
+        deleteNode(restaurante,nombre,direccion,graph)
     if n == 4:
         print("Nos apena que quieras salir del programa :(")
         print("En todo caso, esperamos que te haya sido de utilidad :)")
