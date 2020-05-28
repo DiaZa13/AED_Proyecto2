@@ -16,8 +16,8 @@ public class GUI_MainApp {
 
 	private JFrame frame;
 	
-	private ImageIcon logo, ubicacion, dinero, calificacion;
-	private Icon logoIcon, ubicacionIcon, dineroIcon, calificacionIcon;
+	private ImageIcon logo, ubicacion, dinero, calificacion, unaE, dosE, tresE, cuatroE, cincoE;
+	private Icon logoIcon, ubicacionIcon, dineroIcon, calificacionIcon, unaEIcon, dosEIcon, tresEIcon, cuatroEIcon, cincoEIcon;
 
 	/**
 	 * Launch the application.
@@ -47,7 +47,7 @@ public class GUI_MainApp {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 358, 577);
+		frame.setBounds(100, 100, 358, 611);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new CardLayout(0, 0));
 		
@@ -60,6 +60,17 @@ public class GUI_MainApp {
 		dineroIcon = new ImageIcon(dinero.getImage().getScaledInstance(50, 45, Image.SCALE_DEFAULT));
 		calificacion = new ImageIcon(getClass().getResource("calificacion.png"));
 		calificacionIcon = new ImageIcon(calificacion.getImage().getScaledInstance(50, 45, Image.SCALE_DEFAULT));
+		unaE = new ImageIcon(getClass().getResource("UnaE.png"));
+		unaEIcon = new ImageIcon(unaE.getImage().getScaledInstance(40, 40, Image.SCALE_DEFAULT));
+		dosE = new ImageIcon(getClass().getResource("dosE.png"));
+		dosEIcon = new ImageIcon(dosE.getImage().getScaledInstance(80, 40, Image.SCALE_DEFAULT));
+		tresE = new ImageIcon(getClass().getResource("tresE.png"));
+		tresEIcon = new ImageIcon(tresE.getImage().getScaledInstance(120, 40, Image.SCALE_DEFAULT));
+		cuatroE = new ImageIcon(getClass().getResource("cuatroE.png"));
+		cuatroEIcon = new ImageIcon(cuatroE.getImage().getScaledInstance(160, 40, Image.SCALE_DEFAULT));
+		cincoE = new ImageIcon(getClass().getResource("cincoE.png"));
+		cincoEIcon = new ImageIcon(cincoE.getImage().getScaledInstance(120, 80, Image.SCALE_DEFAULT));
+		
 		
 		JPanel HomePanel = new JPanel();
 		HomePanel.setBackground(Color.WHITE);
@@ -136,5 +147,41 @@ public class GUI_MainApp {
 		lblCalificacionImage.setBounds(10, 322, 53, 45);
 		HomePanel.add(lblCalificacionImage);
 		lblCalificacionImage.setIcon(calificacionIcon);
+		
+		JLabel lblUnaE = new JLabel("");
+		lblUnaE.setForeground(new Color(204, 0, 0));
+		lblUnaE.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		lblUnaE.setBounds(20, 377, 40, 40);
+		HomePanel.add(lblUnaE);
+		lblUnaE.setIcon(unaEIcon);
+		
+		JLabel lblDosE = new JLabel("");
+		lblDosE.setForeground(new Color(204, 0, 0));
+		lblDosE.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		lblDosE.setBounds(101, 377, 80, 40);
+		HomePanel.add(lblDosE);
+		lblDosE.setIcon(dosEIcon);
+		
+		JLabel lblTresE = new JLabel("");
+		lblTresE.setForeground(new Color(204, 0, 0));
+		lblTresE.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		lblTresE.setBounds(201, 377, 120, 40);
+		HomePanel.add(lblTresE);
+		lblTresE.setIcon(tresEIcon);
+		
+		JLabel lblCuatroE = new JLabel("");
+		lblCuatroE.setForeground(new Color(204, 0, 0));
+		lblCuatroE.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		lblCuatroE.setBounds(21, 456, 160, 40);
+		HomePanel.add(lblCuatroE);
+		lblCuatroE.setIcon(cuatroEIcon);
+		
+		JLabel lblCincoE = new JLabel("");
+		lblCincoE.setForeground(new Color(204, 0, 0));
+		lblCincoE.setFont(new Font("Bahnschrift", Font.BOLD, 20));
+		lblCincoE.setBounds(201, 436, 120, 80);
+		HomePanel.add(lblCincoE);
+		lblCincoE.setIcon(cincoEIcon);
+		
 	}
 }
