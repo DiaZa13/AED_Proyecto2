@@ -18,7 +18,7 @@ print("_________________________________________________________________________
 print("PARA INICIAR EL PROGRAMA, POR FAVOR SELECCIONE UNA DE LAS OPCIONES QUE SE PRESENTAN A CONTINUACION")
 print("____________________________________________________________________________________________________")
 graph = Graph("bolt://localhost:7687", user="neo4j", password="password")
-while n < 5:    
+while n < 4:    
     print ("1. Encontrar una recomendacion")
     print ("2. Agregar nueva informacion al programa")
     print ("3. Eliminar datos que no desea en el programa")
@@ -40,7 +40,14 @@ while n < 5:
         
         agregarNodo(restaurante,direccion,nombre,graph)
     if n == 3:
-        print("Ingresar aqui la funcion de eliminar un nodo")
+        print("Ingresar el restaurante al que desea eliminar")
+        restaurante = input()
+        print ("Ingresar el nombre del restaurante que desea eliminar")
+        nombre = input()
+        print("Ingresar la direccion del restaurante eliminar")
+        direccion = input()
+         
+        eliminarNodo(restaurante,nombre,direccion,graph)
     if n == 4:
         print("Nos apena que quieras salir del programa :(")
         print("En todo caso, esperamos que te haya sido de utilidad :)")
