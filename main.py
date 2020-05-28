@@ -18,11 +18,12 @@ print("PARA INICIAR EL PROGRAMA, POR FAVOR SELECCIONE UNA DE LAS OPCIONES QUE SE
 print("____________________________________________________________________________________________________")
 
 
-while n < 4:    
+while n < 5:    
     print ("1. Encontrar una recomendacion")
     print ("2. Agregar nueva informacion al programa")
     print ("3. Eliminar datos que no desea en el programa")
-    print ("4. Salir")
+    print ("4. Crear una nueva relacion entre nodos")
+    print ("5. Salir")
     
     try:
         n = int (input())
@@ -86,6 +87,33 @@ while n < 4:
          
         deleteNode(restaurante,nombre,direccion,graph)
     if n == 4:
+        print ("Creando una nueva relacion.")
+        print ("¿Cual es el nombre del restaurante?")
+        nombreR = input("Ingrese el restaurante: ")
+        print("1. Ubicacion")
+        print("2. Rango de precio")
+        print("3. Calidad del restaurante")
+        z = int (input("¿Que tipo de relacion desea hacer?: "))
+        if z == 1:
+            print("1. Zona 9")
+            print("2. Zona 10")
+            print("3. Zona 15")
+            tipoR = int (input("¿En que zona se encuentra el restaurante?: " ))
+        if z == 2:
+            print("1. Q.50 - Q.100")
+            print("2. Q.100 - Q.150")
+            print("3. Q.150 - Q.200")
+            print("4. Q.200 - mas")
+            tipoR = int (input("¿Cual es el rango del precio del restaurante?: "))           
+        if z == 3:
+            print("1. Una estrella")
+            print("2. Dos estrellas")
+            print("3. Tres estrellas")
+            print("4. Cuatro estrellas")
+            print("5. Cinco estrellas")
+            tipoR = int (input("¿Cual es la calidad del restaurante?: "))
+        newRelationship(z,nombreR,tipoR)
+    if n == 5:
         print("Nos apena que quieras salir del programa :(")
         print("En todo caso, esperamos que te haya sido de utilidad :)")
         print("888")                        
@@ -102,6 +130,3 @@ while n < 4:
         sys.exit()
         
    
-
-
- 

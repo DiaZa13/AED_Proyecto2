@@ -163,6 +163,64 @@ def searchRestaurantbyType(foodType):
         typeRestaurants.append(restaurant)
         
     return typeRestaurants
+def newRelationship(tipo, restaurant, relationShip):
+    print (restaurant)
+    if relationShip == 1:
+        if tipo == 1:            
+            query = """
+                CREATE (%s)-[:Ubicado_En]->(Zona9)
+                """ %(restaurant)
+            print ("Hola")
+        if tipo == 2:            
+            query = """
+                CREATE (%s)-[:Ubicado_En]->(Zona10)
+                """ %(restaurant)
+        if tipo == 3:            
+            query = """
+                CREATE (%s)-[:Ubicado_En]->(Zona15)
+                """ %(restaurant)
+        
+    if relationShip == 2:
+        if tipo == 1:            
+            query = """
+                CREATE (%s)-[:Rango_Precios]->(Rango1)
+                """ %(restaurant)
+        if tipo == 2:            
+            query = """
+                CREATE (%s)-[:Rango_Precios]->(Rango2)
+                """ %(restaurant)
+        if tipo == 3:            
+            query = """
+                CREATE (%s)-[:Rango_Precios]->(Rango3)
+                """ %(restaurant)
+        if tipo == 4:            
+            query = """
+                CREATE (%s)-[:Rango_Precios]-> (Rango4)
+                """ %(restaurant)
+        
+    if relationShip == 3:
+        if tipo == 1:            
+            query = """
+                CREATE (%s)-[:Calificado_con]->(Uno)
+                """ %(restaurant)
+        if tipo == 2:            
+            query = """
+                CREATE (%s)-[:Calificado_con]->(Dos)
+                """ %(restaurant)
+        if tipo == 3:            
+            query = """
+                CREATE (%s)-[:Calificado_con]->(Tres)
+                """ %(restaurant)
+        if tipo == 4:            
+            query = """
+                CREATE (%s)-[:Calificado_con]->(Cuatro)
+                """ %(restaurant)
+        if tipo == 5:            
+            query = """
+                CREATE (%s)-[:Calificado_con]->(Cinco)
+                """ %(restaurant)
+    data = graph.run(query) 
+    
 
 def determinateRecommendation(zoneRestaurants,moneyRestaurants,scoreRestaurants,typeRestaurants):
     recommendation = []
