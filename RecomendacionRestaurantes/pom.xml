@@ -3,6 +3,7 @@
   <groupId>RecomendacionRestaurantes</groupId>
   <artifactId>RecomendacionRestaurantes</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
@@ -28,6 +29,15 @@
   		<groupId>org.neo4j</groupId>
   		<artifactId>neo4j</artifactId>
   		<version>4.0.3</version>
-  	</dependency>
+  	</dependency><dependency>
+      <groupId>org.neo4j.driver</groupId>
+      <artifactId>neo4j-java-driver</artifactId>
+      <version>4.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.neo4j.driver</groupId>
+      <artifactId>neo4j-java-driver</artifactId>
+      <version>4.0.1</version>
+    </dependency>
   </dependencies>
 </project>
