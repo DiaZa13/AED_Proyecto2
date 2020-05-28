@@ -47,6 +47,34 @@ def searchRestaurantbyZone(zone):
         
     return zoneRestaurants
 
+def searchRestaurantbyMoney(money):
+    moneyRestaurants = []
+    if money == 1:
+        query = """
+        MATCH (restaurante)-[:Rango_Precios]-> (Money {name: "Q.50-Q.100"})
+        RETURN restaurante.name
+        """
+    if money == 2:
+        query = """
+        MATCH (restaurante)-[:Rango_Precios]-> (Money {name: "Q.100-Q.105"})
+        RETURN restaurante.name
+        """
+    if money == 3:
+        query = """
+        MATCH (restaurante)-[:Rango_Precios]-> (Money {name: "Q.150-Q.200"})
+        RETURN restaurante.name
+        """
+    if money == 4:
+        query = """
+        MATCH (restaurante)-[:Rango_Precios]-> (Money {name: "Q.200-mas"})
+        RETURN restaurante.name
+        """
+    restaurants = graph.run(query).data()
+    for restaurant in restaurants:
+        moneyRestaurants.append(restaurant)
+        
+    return moneyRestaurants
+
 
     def create_or_fail(graph_db, start_node, end_node, relationship):
         if len(list(graph_db.match(start_node=start_node, end_node=end_node, rel_type=relationship))) > 0:

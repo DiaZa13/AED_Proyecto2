@@ -29,12 +29,23 @@ while n < 4:
     except:
         print("Ingrese un valor valido")
     if n == 1:
+        print("*--Ubicacion--*")
         print("1. Zona 9")
         print("2. Zona 10")
         print("3. Zona 15")
         zone = int(input("Ingrese el numero de la zona en la que se encuentra: "))
         restaurants = searchRestaurantbyZone(zone)
         for restaurant in restaurants:
+            print("Restaurante: {0}".format(restaurant))
+        print("")
+        print("*--Disponibilidad Economica--*")
+        print("1. Q.50 - Q.100")
+        print("2. Q.100 - Q.150")
+        print("3. Q.150 - Q.200")
+        print("4. Q.200 - mas")
+        money = int(input("Ingrese el numero de la disponibilidad economica con la que cuente: "))
+        restaurants1 = searchRestaurantbyMoney(money)
+        for restaurant in restaurants1:
             print("Restaurante: {0}".format(restaurant))
         print("")
     if n == 2:
