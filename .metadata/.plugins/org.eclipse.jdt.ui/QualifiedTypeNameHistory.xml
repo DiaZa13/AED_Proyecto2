@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="org.neo4j.cypher.internal.runtime.interpreted.commands.expressions.File"/>
+    <fullyQualifiedTypeName name="org.neo4j.cypher.internal.v4_0.expressions.functions.File"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.sql.Driver"/>
+    <fullyQualifiedTypeName name="org.neo4j.graphdb.GraphDatabaseService"/>
+    <fullyQualifiedTypeName name="org.neo4j.graphdb.Node"/>
+    <fullyQualifiedTypeName name="org.neo4j.graphdb.Relationship"/>
+    <fullyQualifiedTypeName name="org.neo4j.dbms.api.DatabaseManagementService"/>
+    <fullyQualifiedTypeName name="org.neo4j.graphdb.Transaction"/>
+</qualifiedTypeNameHistroy>

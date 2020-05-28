@@ -1,5 +1,4 @@
 import sys
-from py2neo import *
 from Subrutinas import *
 n =0
 print("_________________________________________________________________________________________")
@@ -17,8 +16,11 @@ print("Especificamente en restaurantes, sin mas que agregar, ya puede usar el pr
 print("____________________________________________________________________________________________________")
 print("PARA INICIAR EL PROGRAMA, POR FAVOR SELECCIONE UNA DE LAS OPCIONES QUE SE PRESENTAN A CONTINUACION")
 print("____________________________________________________________________________________________________")
-graph = Graph("bolt://localhost:7687", user="neo4j", password="password")
+
 while n < 4:    
+
+while n < 5:    
+>>>>>>> Stashed changes
     print ("1. Encontrar una recomendacion")
     print ("2. Agregar nueva informacion al programa")
     print ("3. Eliminar datos que no desea en el programa")
@@ -64,20 +66,6 @@ while n < 4:
         print("          Y88P  ")
         sys.exit()
         
-    
-def create_or_fail(graph_db, start_node, end_node, relationship):
-    if len(list(graph_db.match(start_node=start_node, end_node=end_node, rel_type=relationship))) > 0:
-        print ("Relationship already exists")
-        return None
-    return graph_db.create((start_node, relationship, end_node))
-query = """
-MATCH (restaurante)-[:Ubicado_En]-> (Zone {name: "Zona 9"})
-RETURN restaurante.name
-"""
-data = graph.run(query).data()
-for d in data:
-    print (d)
-    
    
 
 
