@@ -108,7 +108,6 @@ def searchRestaurantbyScore(score):
     restaurants = graph.run(query).data()
     for restaurant in restaurants:
         scoreRestaurants.append(restaurant)
-        print ("hola")
     return scoreRestaurants
 
 #Look for a restaurant depending the food type
@@ -164,6 +163,15 @@ def searchRestaurantbyType(foodType):
         typeRestaurants.append(restaurant)
         
     return typeRestaurants
+
+def determinateRecommendation(zoneRestaurants,moneyRestaurants,scoreRestaurants,typeRestaurants):
+    recommendation = []
+    for restaurant in zoneRestaurants:
+        if restaurant in moneyRestaurants:
+            recommendation.append(restaurant)
+            
+    return recommendation
+    
 
 
 

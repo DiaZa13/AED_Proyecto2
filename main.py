@@ -35,9 +35,6 @@ while n < 4:
         print("3. Zona 15")
         zone = int(input("Ingrese el numero de la zona en la que se encuentra: "))
         restaurants = searchRestaurantbyZone(zone)
-        for restaurant in restaurants:
-            print("Restaurante: {0}".format(restaurant))
-        print("")
         print("*--Disponibilidad Economica--*")
         print("1. Q.50 - Q.100")
         print("2. Q.100 - Q.150")
@@ -45,9 +42,6 @@ while n < 4:
         print("4. Q.200 - mas")
         money = int(input("Ingrese el numero de la disponibilidad economica con la que cuente: "))
         restaurants1 = searchRestaurantbyMoney(money)
-        for restaurant in restaurants1:
-            print("Restaurante: {0}".format(restaurant))
-        print("")
         print("*--Calidad del restaurante--*")
         print("1. Una estrella")
         print("2. Dos estrellas")
@@ -56,9 +50,6 @@ while n < 4:
         print("5. Cinco estrellas")
         score = int(input("Ingrese el numero de estrellas con la que el restaurante: "))
         restaurants2 = searchRestaurantbyScore(score)
-        for restaurant in restaurants2:
-            print("Restaurante: {0}".format(restaurant))
-        print("")
         print("*--Tipo de comida--*")
         print("1. Gourmet")
         print("2. Pizza")
@@ -71,8 +62,9 @@ while n < 4:
         print("9. Hamburguesa")
         score = int(input("Ingrese el numero de tipo de comida que busca: "))
         restaurants3 = searchRestaurantbyType(score)
-        for restaurant in restaurants3:
-            print("Restaurante: {0}".format(restaurant))
+        recommendation = determinateRecommendation(restaurants,restaurants1,restaurants2,restaurants3)
+        for recommended in recommendation:
+            print("Recomendacion: {0}".format(recommended))
         print("")
     if n == 2:
         print("Ingresar el restaurante")
