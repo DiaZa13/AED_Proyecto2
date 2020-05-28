@@ -1,5 +1,5 @@
 from py2neo import *
-graph = Graph("bolt://localhost:7687", user="neo4j", password="1234")
+graph = Graph("bolt://localhost:7687", user="neo4j", password="password")
 
 #Adds a new restaurant to the database
 def addNewnode(restaurante,direccion,nombre,graph):
@@ -75,12 +75,41 @@ def searchRestaurantbyMoney(money):
         
     return moneyRestaurants
 
+#----------------------------------------------
+#Look for a restaurant depending the zone
+def searchRestaurantbyScore(score):
+    scoreRestaurants = []
+    if score == 1:
+        query = """
+        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "1 Estrella"})
+        RETURN restaurante.name
+        """
+    if score == 2:
+        query = """
+        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "2 Estrella"})
+        RETURN restaurante.name
+        """
+    if score == 3:
+        query = """
+        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "3 Estrella"})
+        RETURN restaurante.name
+        """
+    if score == 4:
+        query = """
+        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "4 Estrella"})
+        RETURN restaurante.name
+        """
+    if score == 5:
+        query = """
+        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "5 Estrella"})
+        RETURN restaurante.name
+        """
 
-    def create_or_fail(graph_db, start_node, end_node, relationship):
-        if len(list(graph_db.match(start_node=start_node, end_node=end_node, rel_type=relationship))) > 0:
-            print ("Relationship already exists")
-            return None
-        return graph_db.create((start_node, relationship, end_node))
+    restaurants = graph.run(query).data()
+    for restaurant in restaurants:
+        scoreRestaurants.append(restaurant)
+        
+    return scoreRestaurants
 
 
 

@@ -48,6 +48,17 @@ while n < 4:
         for restaurant in restaurants1:
             print("Restaurante: {0}".format(restaurant))
         print("")
+        print("*--Calidad del restaurante--*")
+        print("1. Una estrella")
+        print("2. Dos estrellas")
+        print("3. Tres estrellas")
+        print("4. Cuatro estrellas")
+        print("5. Cinco estrellas")
+        score = int(input("Ingrese el numero de estrellas con la que el restaurante: "))
+        restaurants2 = searchRestaurantbyScore(score)
+        for restaurant in restaurants2:
+            print("Restaurante: {0}".format(restaurant))
+        print("")
     if n == 2:
         print("Ingresar el restaurante")
         restaurante = input()
