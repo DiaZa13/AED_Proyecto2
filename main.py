@@ -1,6 +1,7 @@
 from py2neo import *
 from Subrutinas import *
 n =0
+graph = Graph("bolt://localhost:7687", user="neo4j", password="password")
 while n < 4:    
     print ("Bienvenido a la aplicacion -----( ͡❛ ͜ʖ ͡❛)")
     print ("¿Que desea hace?")
@@ -23,11 +24,10 @@ while n < 4:
         print("Ingresar la direccion del restaurante")
         direccion = input()
         
-        agregarNodo(restaurante,direccion,nombre)
+        agregarNodo(restaurante,direccion,nombre,graph)
     if n == 3:
         print("Ingresar aqui la funcion de eliminar un nodo")
     
-graph = Graph("bolt://localhost:7687", user="neo4j", password="password")
 def create_or_fail(graph_db, start_node, end_node, relationship):
     if len(list(graph_db.match(start_node=start_node, end_node=end_node, rel_type=relationship))) > 0:
         print ("Relationship already exists")
