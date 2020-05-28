@@ -31,7 +31,10 @@ while n < 5:
     except:
         print("Ingrese un valor valido")
     if n == 1:
-        print("Ingresar aqui la funcion de mostrar recomendacion")
+        print("1. Zona 9")
+        print("2. Zona 10")
+        print("3. Zona 15")
+        zone = input("Ingrese el numero de la zona en la que se encuentra: ")
     if n == 2:
         print("Ingresar el restaurante")
         restaurante = input()
