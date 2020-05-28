@@ -86,29 +86,28 @@ def searchRestaurantbyScore(score):
         """
     if score == 2:
         query = """
-        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "2 Estrella"})
+        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "2 Estrellas"})
         RETURN restaurante.name
         """
     if score == 3:
         query = """
-        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "3 Estrella"})
+        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "3 Estrellas"})
         RETURN restaurante.name
         """
     if score == 4:
         query = """
-        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "4 Estrella"})
+        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "4 Estrellas"})
         RETURN restaurante.name
         """
     if score == 5:
         query = """
-        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "5 Estrella"})
+        MATCH (restaurante)-[:Calificado_con]-> (Score {name: "5 Estrellas"})
         RETURN restaurante.name
         """
-
     restaurants = graph.run(query).data()
     for restaurant in restaurants:
         scoreRestaurants.append(restaurant)
-        
+        print ("hola")
     return scoreRestaurants
 
 
