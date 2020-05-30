@@ -18,16 +18,13 @@ print("PARA INICIAR EL PROGRAMA, POR FAVOR SELECCIONE UNA DE LAS OPCIONES QUE SE
 print("____________________________________________________________________________________________________")
 
 
-<<<<<<< Updated upstream
 while n < 5:    
     
-=======
-while n < 4:    
->>>>>>> Stashed changes
     print ("1. Encontrar una recomendacion")
     print ("2. Agregar nueva informacion al programa")
     print ("3. Eliminar datos que no desea en el programa")
-    print ("4. Salir")
+    print ("4. Crear una nueva relacion entre nodos")
+    print ("5. Salir")
     
     try:
         n = int (input())
@@ -69,19 +66,18 @@ while n < 4:
         restaurants3 = searchRestaurantbyType(score)
         recommendation = determinateRecommendation(restaurants,restaurants1,restaurants2,restaurants3)
         finalrecommendation = finalRecommendation(recommendation)
-        for recommended in recommendation:
-            print("Recomendacion: {0}".format(recommended))
-        print("")
         for recommended in finalrecommendation:
             print("Recomendacion: {0}".format(recommended))
         print("")
     if n == 2:
+        print("Ingresar el restaurante")
+        restaurante = input()
         print ("Ingresar el nombre del restaurante")
         nombre = input()
         print("Ingresar la direccion del restaurante")
         direccion = input()
         
-        addNewnode(direccion,nombre,graph)
+        addNewnode(restaurante,direccion,nombre,graph)
     if n == 3:
         print("Ingresar el restaurante al que desea eliminar")
         restaurante = input()
@@ -90,9 +86,8 @@ while n < 4:
         print("Ingresar la direccion del restaurante eliminar")
         direccion = input()
          
-        deleteNode(restaurante,nombre,direccion)
+        deleteNode(restaurante,nombre,direccion,graph)
     if n == 4:
-<<<<<<< Updated upstream
         print ("Creando una nueva relacion.")
         nombre = input("Ingrese el restaurante: ")
         nombreR = input("Ingrese el nombre del restaurante: ")
@@ -132,8 +127,6 @@ while n < 4:
             tipoR = int (input("¿Cual es la calidad del restaurante?: "))
         newRelationship(tipoR,nombreR,z,nombre)
     if n == 5:
-=======
->>>>>>> Stashed changes
         print("Nos apena que quieras salir del programa :(")
         print("En todo caso, esperamos que te haya sido de utilidad :)")
         print("888")                        
@@ -148,8 +141,4 @@ while n < 4:
         print("        Y8b d88P  ")        
         print("          Y88P  ")
         sys.exit()
-        
-   
-
-
  
