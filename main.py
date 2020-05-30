@@ -19,6 +19,7 @@ print("_________________________________________________________________________
 
 
 while n < 5:    
+    
     print ("1. Encontrar una recomendacion")
     print ("2. Agregar nueva informacion al programa")
     print ("3. Eliminar datos que no desea en el programa")
@@ -88,11 +89,12 @@ while n < 5:
         deleteNode(restaurante,nombre,direccion,graph)
     if n == 4:
         print ("Creando una nueva relacion.")
-        print ("¿Cual es el nombre del restaurante?")
-        nombreR = input("Ingrese el restaurante: ")
+        nombre = input("Ingrese el restaurante: ")
+        nombreR = input("Ingrese el nombre del restaurante: ")
         print("1. Ubicacion")
         print("2. Rango de precio")
         print("3. Calidad del restaurante")
+        print("4. Tipo de comida")
         z = int (input("¿Que tipo de relacion desea hacer?: "))
         if z == 1:
             print("1. Zona 9")
@@ -112,7 +114,18 @@ while n < 5:
             print("4. Cuatro estrellas")
             print("5. Cinco estrellas")
             tipoR = int (input("¿Cual es la calidad del restaurante?: "))
-        newRelationship(z,nombreR,tipoR)
+        if z == 4:
+            print("1. Gourmet")
+            print("2. Pizza")
+            print("3. Tacos")
+            print("4. Shucos")
+            print("5. Casera")
+            print("6. Pollo")
+            print("7. Comida Rapida")
+            print("8. Carne")
+            print("9. Hamburguesa")
+            tipoR = int (input("¿Cual es la calidad del restaurante?: "))
+        newRelationship(tipoR,nombreR,z,nombre)
     if n == 5:
         print("Nos apena que quieras salir del programa :(")
         print("En todo caso, esperamos que te haya sido de utilidad :)")
