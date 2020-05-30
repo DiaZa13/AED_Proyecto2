@@ -40,13 +40,13 @@ _Tener instalado el material mencionado anteriormente es esencial para que se pu
 
 ## Ejecutando el programa ⚙️
 
-*Lo primero es crear nuestra base base de datos, utilizando como contraseña: password, y utilizando el usuario por defecto que utliza neo4j.
-*Luego presionamos el botón de start y cuando nuestra base de datos esté activa, presionamos el botón open
-*Al momento de presionar open, se abrira una nueva pestaña. En la nueva pestaña en la línea de comando neo4j$ pegar los datos contenidos en el documento DB.text.
-*Dar en el botón play y esperar a que compile la base de datos.*
-*Con la base de datos abierta y corriendo, abrir su editor de python.*
-*Con el editor abierto, seleccionar la parte para abrir un nuevo documento, dirigirse a la carpeta en la cual contiene los archivos main.py y subrutinas.py y abirlos.
-*Cuando ambos archivos se encuentran abiertos, compilar el archivo main.py
+* Lo primero es crear nuestra base base de datos, utilizando como contraseña: password, y utilizando el usuario por defecto que utliza neo4j.
+* Luego presionamos el botón de start y cuando nuestra base de datos esté activa, presionamos el botón open
+* Al momento de presionar open, se abrira una nueva pestaña. En la nueva pestaña en la línea de comando neo4j$ pegar los datos contenidos en el documento DB.text.
+* Dar en el botón play y esperar a que compile la base de datos.*
+* Con la base de datos abierta y corriendo, abrir su editor de python.*
+* Con el editor abierto, seleccionar la parte para abrir un nuevo documento, dirigirse a la carpeta en la cual contiene los archivos main.py y subrutinas.py y abirlos.
+* Cuando ambos archivos se encuentran abiertos, compilar el archivo main.py
 
 ## Despliegue 📦
 
