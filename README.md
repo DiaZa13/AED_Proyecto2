@@ -1,26 +1,25 @@
 # PROYECTO FINAL DE ALGORITMOS Y ESTRUCTURA DE DATOS
 
-_Este proyecto tiene como finalidad implementar una base de datos de Neo4j, mostrada en forma de sistema de recomendacion_
+_Este proyecto tiene como finalidad realizar la recomendacion de restaurantes por medio de la implementación una base de datos basada grafos_
 
 ## Comenzando 🚀
-
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Que cosas necesitas para instalar  el software y realiar pruebas_
 
 ```
 - Es necesario tener el programa: Neo4j Desktop
 - Es necesario tener un IDE o similar, que sea compatible con el lenguaje Python 
-- Es necesario tener los paquetes tanto de Neo4j como py2neo
+- Es necesario tener instalada la libreria py2neo
 ```
 
 ### Instalación 🔧
 
 _Como instalar los pre-requisitos_
 
-_Python_
+_Neo4j_
 ```
 Lo puedes descargar desde: https://neo4j.com/download/
 ```
@@ -28,29 +27,30 @@ Lo puedes descargar desde: https://neo4j.com/download/
 _Python_
 
 ```
-En este caso busca el que mejor te convenga, siempre y cuando soportar archivos .py
+En este caso busca el IDE que mejor te convenga, siempre y cuando soporte archivos .py
 ```
 
-_Neo4j y py2neo__
+_py2neo__
 
 ```
-Buscar dentro del market del IDE, los paquetes correspondientes
+Buscar dentro del market del IDE, las librerias correspondientes
 ```
 
-_Esto deberia ser suficiente para poder correr el programa_
+_Tener instalado el material mencionado anteriormente es esencial para que se pueda poner a prueba el programa_
 
 ## Ejecutando el programa ⚙️
 
-_Lo primero es crear una nueva base de datos, con el mismo user y contraseña que se brindan el el codigo_
-_En la línea de comando neo4j$ pegar los datos contenidos en el documento DB.text._
+_Lo primero es crear nuestra base base de datos, utilizando como contraseña: password, y utilizando el usuario por defecto que utliza neo4j._
+_Luego presionamos el botón de start y cuando nuestra base de datos esté activa, presionamos el botón open_
+_Al momento de presionar open, se abrira una nueva pestaña. En la nueva pestaña en la línea de comando neo4j$ pegar los datos contenidos en el documento DB.text._
 _Dar en el botón play y esperar a que compile la base de datos._
-_Con la base de datos abierta y corriendo, ingresar a python._
-_En la pestaña de Tools acceder a “Open system shell”_
-_Correr el programa :D_
+_Con la base de datos abierta y corriendo, abrir su editor de python._
+_Con el editor abierto, seleccionar la parte para abrir un nuevo documento, dirigirse a la carpeta en la cual contiene los archivos main.py y subrutinas.py y abirlos.
+_Cuando ambos archivos se encuentran abiertos, compilar el archivo main.py
 
 ## Despliegue 📦
 
-_Si es programa tiene todo lo que necesario, se desplegara un menu de opciones. _
+_Si se han seguido todos los pasos anteriormente descritos, el programa le desplegara un menu de opciones. _
 
 ## Construido con 🛠️
 
