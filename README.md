@@ -85,7 +85,8 @@ Este proyecto está bajo la Licencia (Python)
 ## Expresiones de Gratitud 🎁
 
 * Nunca habia tenido tando dolor de cabeza por un solo codigo.
-* etc.
+* Las lágrimas derramadas en el transcurso de la programación serán inolvidables
+* Gracias especialmente por todas las horas de sueño robadas.
 
 
 
