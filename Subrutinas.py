@@ -1,12 +1,17 @@
 from py2neo import *
 graph = Graph("bolt://localhost:7687", user="neo4j", password="password")
 
+<<<<<<< Updated upstream
 #Adds a new restaurant to the database    
 def addNewnode(restaurante,direccion,nombre,graph):
+=======
+#Adds a new restaurant to the database
+def addNewnode(direccion,nombre,graph):
+>>>>>>> Stashed changes
     tx = graph.begin()
     query = """
     CREATE (%s:Restaurant{name: "%s", address:"%s"})
-    """ %(restaurante,nombre,direccion)
+    """ %(nombre,nombre,direccion)
     data = graph.run(query)
     print ("Se logro agregar el nodo con exito")
  
@@ -163,8 +168,15 @@ def searchRestaurantbyType(foodType):
         typeRestaurants.append(restaurant)
         
     return typeRestaurants
+<<<<<<< Updated upstream
 #add a new relationship
 def newRelationship(tipo, restaurant, relationShip,nombre):
+=======
+
+#Creates a new relatioship
+def newRelationship(tipo, restaurant, relationShip):
+    print (restaurant)
+>>>>>>> Stashed changes
     if relationShip == 1:
         if tipo == 1:            
             query = """

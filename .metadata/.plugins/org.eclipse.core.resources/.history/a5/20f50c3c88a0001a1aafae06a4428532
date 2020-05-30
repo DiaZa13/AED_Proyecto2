@@ -1,7 +1,0 @@
-import org.neo4j.cypher.internal.v4_0.expressions.functions.File;
-
-public class prueba {
-	
-	private static final File DB_PATH = new File("targe/neo4j-recommendatio-db");
-
-}
